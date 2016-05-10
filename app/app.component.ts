@@ -17,7 +17,6 @@ import { HeroDetailComponent } from './hero-detail.component';
     </ul>
     <my-hero-detail [hero]="selectedHero"></my-hero-detail>
   `,
-
   styles: [`
     .selected {
       background-color: #CFD8DC !important;
@@ -67,16 +66,14 @@ import { HeroDetailComponent } from './hero-detail.component';
       border-radius: 4px 0 0 4px;
     }
   `],
-  directives: [HeroDetailComponent]  
+  directives: [HeroDetailComponent]
 })
 export class AppComponent {
   title = 'Tour of Heroes';
   heroes = HEROES;
   selectedHero: Hero;
-
   onSelect(hero: Hero) { this.selectedHero = hero; }
 }
-
 var HEROES: Hero[] = [
   { "id": 11, "name": "Mr. Nice" },
   { "id": 12, "name": "Narco" },
